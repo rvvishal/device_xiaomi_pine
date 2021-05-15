@@ -7,7 +7,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-$(call inherit-product, vendor/xiaomi/pine/pine-vendor.mk)
+$(call inherit-product, vendor/xiaomi/olivewood/olivewood-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -209,7 +209,8 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.pine
+    android.hardware.light@2.0-service.xiaomi_sdm439
+
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -289,8 +290,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
+    android.hardware.power@1.2-service.xiaomi_sdm439
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
